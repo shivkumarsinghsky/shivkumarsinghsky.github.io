@@ -8,6 +8,7 @@
   <meta name="author" content="Shiv Kumar">
   <meta name="keywords" content="Shiv Kumar, Shiv Kumar Software Architect, shivkumarsinghsky, software architect Noida, system design, distributed systems, microservices, event-driven architecture, EAM, enterprise asset management, multi-tenant SaaS, RAG, agentic AI">
   <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0E1A2B">
   <link rel="canonical" href="https://shivkumarsinghsky.github.io/">
   <meta property="og:type" content="profile">
   <meta property="og:title" content="Shiv Kumar — Software Architect | Distributed Systems, EAM &amp; Enterprise AI">
@@ -21,192 +22,270 @@
   <meta name="twitter:title" content="Shiv Kumar — Software Architect | Distributed Systems, EAM &amp; Enterprise AI">
   <meta name="twitter:description" content="Shiv Kumar is a Software Architect and Senior Software Engineer in Noida, India, with 12+ years designing enterprise platforms, distributed systems, event-driven microservices, EAM/FSM and AI applications.">
   <!-- google-site-verification: paste the meta tag from Google Search Console on the next line -->
-  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Shiv Kumar", "url": "https://shivkumarsinghsky.github.io/", "jobTitle": "Software Architect", "description": "Shiv Kumar is a Software Architect and Senior Software Engineer in Noida, India, with 12+ years designing enterprise platforms, distributed systems, event-driven microservices, EAM/FSM and AI applications.", "worksFor": {"@type": "Organization", "name": "Agelix Consulting Pvt Ltd"}, "address": {"@type": "PostalAddress", "addressLocality": "Noida", "addressRegion": "Uttar Pradesh", "addressCountry": "IN"}, "sameAs": ["https://github.com/shivkumarsinghsky"], "knowsAbout": ["Software Architecture", "System Design", "Distributed Systems", "Microservices", "Event-Driven Architecture", "Multi-Tenant SaaS", "Enterprise Asset Management", "Field Service Management", "Real-Time Monitoring", "Retrieval-Augmented Generation", "Agentic AI", "LangGraph", "Python", "TypeScript", "Node.js", ".NET", "PostgreSQL", "Kafka", "RabbitMQ", "Redis", "Docker", "Kubernetes", "AWS", "Azure"]}</script>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230E1A2B'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='700' font-size='15' fill='%23fff' text-anchor='middle'%3ESK%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Shiv Kumar", "url": "https://shivkumarsinghsky.github.io/", "image": "https://github.com/shivkumarsinghsky.png", "jobTitle": "Software Architect", "description": "Shiv Kumar is a Software Architect and Senior Software Engineer in Noida, India, with 12+ years designing enterprise platforms, distributed systems, event-driven microservices, EAM/FSM and AI applications.", "worksFor": {"@type": "Organization", "name": "Agelix Consulting Pvt Ltd"}, "address": {"@type": "PostalAddress", "addressLocality": "Noida", "addressRegion": "Uttar Pradesh", "addressCountry": "IN"}, "sameAs": ["https://github.com/shivkumarsinghsky"], "knowsAbout": ["Software Architecture", "System Design", "Distributed Systems", "Microservices", "Event-Driven Architecture", "Multi-Tenant SaaS", "Enterprise Asset Management", "Field Service Management", "Real-Time Monitoring", "Retrieval-Augmented Generation", "Agentic AI", "LangGraph", "Python", "TypeScript", "Node.js", ".NET", "PostgreSQL", "Kafka", "RabbitMQ", "Redis", "Docker", "Kubernetes", "AWS", "Azure"]}</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebSite", "name": "Shiv Kumar", "url": "https://shivkumarsinghsky.github.io/"}</script>
   <style>
     :root {
-      --bg: #f7f7f5; --surface: #ffffff; --text: #1d1f23; --muted: #5b616b;
-      --border: #e3e3df; --accent: #1f5fbf; --tag-bg: #eef2f8; --tag-text: #2c3e5c;
+      --ink: #0E1A2B; --ink-2: #16263D; --ink-line: #2A3D5A; --on-ink: #EEF2F8; --on-ink-muted: #A9B6C9;
+      --paper: #F5F7FA; --surface: #FFFFFF; --text: #142033; --muted: #556275; --rule: #DDE3EB;
+      --display: "Archivo", "Arial Narrow", Arial, sans-serif;
+      --body: "IBM Plex Sans", -apple-system, "Segoe UI", Roboto, sans-serif;
     }
     @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #111316; --surface: #1a1d21; --text: #e8e9eb; --muted: #a2a8b1;
-        --border: #2b2f35; --accent: #7fb0ff; --tag-bg: #232a35; --tag-text: #c9d6ec;
-      }
+      :root { --paper: #0B1524; --surface: #111F33; --text: #E6ECF4; --muted: #9AA8BC; --rule: #233650; }
+      .domain { --c: var(--c-dark) !important; }
     }
     * { box-sizing: border-box; }
-    body { margin: 0; background: var(--bg); color: var(--text);
-      font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .wrap { max-width: 1040px; margin: 0 auto; padding: 0 16px; }
-    header { padding: 56px 0 32px; border-bottom: 1px solid var(--border); }
-    .who { display: flex; gap: 24px; align-items: center; flex-wrap: wrap; }
-    .who img { width: 104px; height: 104px; border-radius: 50%; border: 1px solid var(--border); }
-    h1 { font-size: 2.3rem; line-height: 1.15; margin: 0 0 6px; letter-spacing: -0.01em; }
-    .role { font-size: 1.15rem; color: var(--muted); margin: 0; }
-    .meta { color: var(--muted); margin: 6px 0 0; font-size: 0.95rem; }
-    .lead { font-size: 1.08rem; max-width: 760px; margin: 24px 0 0; }
-    .links { display: flex; gap: 12px; flex-wrap: wrap; margin-top: 20px; padding: 0; list-style: none; }
-    .links a { display: inline-block; padding: 8px 14px; border: 1px solid var(--border); border-radius: 8px; background: var(--surface); }
-    main { padding: 32px 0 56px; }
-    h2 { font-size: 1.3rem; margin: 40px 0 14px; }
-    .skills { display: flex; flex-wrap: wrap; gap: 8px; padding: 0; list-style: none; margin: 0; }
-    .skills li { background: var(--surface); border: 1px solid var(--border); border-radius: 999px; padding: 4px 12px; font-size: 0.92rem; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; }
-    .card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 16px 18px; }
-    .card h3 { margin: 0 0 6px; font-size: 1.02rem; word-break: break-word; }
-    .card p { margin: 0 0 10px; color: var(--muted); font-size: 0.94rem; }
-    .tags { display: flex; flex-wrap: wrap; gap: 6px; padding: 0; margin: 0; list-style: none; }
-    .tags li { background: var(--tag-bg); color: var(--tag-text); border-radius: 6px; padding: 1px 8px; font-size: 0.8rem; }
-    footer { border-top: 1px solid var(--border); padding: 24px 0 40px; color: var(--muted); font-size: 0.9rem; }
-    @media (max-width: 520px) { h1 { font-size: 1.8rem; } header { padding-top: 36px; } }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; background: var(--paper); color: var(--text); font: 17px/1.6 var(--body); }
+    a { color: inherit; }
+    a:focus-visible { outline: 3px solid #F2AE57; outline-offset: 3px; border-radius: 4px; }
+    .wrap { max-width: 1120px; margin: 0 auto; padding-left: 24px; padding-right: 24px; }
+
+    /* Hero */
+    .hero { background: var(--ink); color: var(--on-ink); overflow: hidden; }
+    .hero-grid { display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr); gap: 32px;
+      align-items: center; padding-top: 72px; padding-bottom: 64px; }
+    .identity { display: flex; align-items: center; gap: 14px; margin-bottom: 28px; }
+    .identity img { width: 56px; height: 56px; border-radius: 50%; border: 2px solid var(--ink-line); background: var(--ink-2); }
+    .identity p { margin: 0; color: var(--on-ink-muted); font-size: 0.95rem; line-height: 1.4; }
+    h1 { font-family: var(--display); font-stretch: 125%; font-weight: 800; font-size: clamp(2.8rem, 7vw, 5rem);
+      line-height: 0.95; letter-spacing: -0.02em; margin: 0 0 18px; }
+    .role { font-family: var(--display); font-stretch: 100%; font-weight: 500; font-size: clamp(1.15rem, 2.2vw, 1.45rem);
+      color: var(--on-ink); margin: 0 0 20px; }
+    .lead { color: var(--on-ink-muted); max-width: 34em; margin: 0 0 32px; font-size: 1.05rem; }
+    .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+    .btn { display: inline-flex; align-items: center; gap: 10px; padding: 12px 20px; border-radius: 10px;
+      font-weight: 600; text-decoration: none; font-size: 0.98rem; }
+    .btn-primary { background: var(--on-ink); color: var(--ink); }
+    .btn-primary:hover { background: #FFFFFF; }
+    .btn-ghost { border: 1px solid var(--ink-line); color: var(--on-ink); }
+    .btn-ghost:hover { border-color: var(--on-ink-muted); }
+    .btn svg { width: 18px; height: 18px; }
+
+    /* System diagram */
+    .system { width: 100%; height: auto; max-width: 580px; justify-self: end; }
+    .area-list { display: none; }
+    .edge { stroke: var(--c); stroke-width: 2; stroke-dasharray: 6 6; opacity: 0.85;
+      animation: draw 900ms ease-out var(--d) both; }
+    @keyframes draw { from { stroke-dashoffset: 180; opacity: 0; } to { stroke-dashoffset: 0; opacity: 0.85; } }
+    .hub circle { fill: var(--on-ink); }
+    .hub text { fill: var(--ink); font-family: var(--display); font-stretch: 112%; font-weight: 800; font-size: 19px; text-anchor: middle; }
+    .node rect { fill: var(--ink-2); stroke: var(--c); stroke-width: 2; transition: fill 160ms ease; }
+    .node text { text-anchor: middle; }
+    .node-label { fill: var(--on-ink); font-family: var(--body); font-weight: 600; font-size: 14px; }
+    .node-count { fill: var(--c); font-family: var(--body); font-weight: 500; font-size: 12.5px; }
+    .node:hover rect, .node:focus-visible rect { fill: #1E3250; }
+    .node:focus-visible { outline: none; }
+    .node:focus-visible rect { stroke-width: 3.5; }
+
+    /* Sections */
+    main section.block { padding: 72px 0 8px; }
+    h2 { font-family: var(--display); font-stretch: 112%; font-weight: 750; font-size: clamp(1.7rem, 3.4vw, 2.3rem);
+      letter-spacing: -0.01em; line-height: 1.1; margin: 0 0 12px; }
+    .section-intro { color: var(--muted); max-width: 40em; margin: 0 0 40px; }
+
+    .domain { display: grid; grid-template-columns: 300px minmax(0, 1fr); gap: 40px; padding: 36px 0;
+      border-top: 1px solid var(--rule); scroll-margin-top: 24px; }
+    .domain-head { border-left: 4px solid var(--c); padding-left: 18px; align-self: start; position: sticky; top: 24px; }
+    .domain-head h3 { font-family: var(--display); font-stretch: 105%; font-weight: 700; font-size: 1.25rem; line-height: 1.25; margin: 0 0 8px; }
+    .domain-head p { margin: 0; color: var(--muted); font-size: 0.97rem; }
+    .project-list { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 28px 36px; }
+    .project h4 { font-family: var(--display); font-stretch: 100%; font-weight: 650; font-size: 1.08rem; margin: 0 0 6px; word-break: break-word; }
+    .project h4 a { text-decoration: none; background-image: linear-gradient(var(--c), var(--c));
+      background-size: 100% 2px; background-position: 0 100%; background-repeat: no-repeat; padding-bottom: 2px; }
+    .project h4 a:hover { color: var(--c); }
+    .project p { margin: 0 0 12px; color: var(--muted); font-size: 0.96rem; line-height: 1.55; }
+    .tags { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px; }
+    .tags li { font-size: 0.8rem; font-weight: 500; padding: 2px 10px; border-radius: 999px;
+      color: var(--c); background: color-mix(in srgb, var(--c) 12%, transparent); }
+
+    .toolbox { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 28px; padding: 8px 0 24px; }
+    .tool-col h3 { font-family: var(--display); font-stretch: 105%; font-weight: 700; font-size: 1.02rem; margin: 0 0 10px;
+      padding-bottom: 10px; border-bottom: 2px solid var(--text); }
+    .tool-col ul { list-style: none; margin: 0; padding: 0; }
+    .tool-col li { padding: 5px 0; color: var(--muted); font-size: 0.95rem; border-bottom: 1px solid var(--rule); }
+
+    footer { margin-top: 72px; background: var(--ink); color: var(--on-ink-muted); }
+    .footer-row { display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px; padding: 32px 0; font-size: 0.95rem; }
+    .footer-row strong { color: var(--on-ink); font-family: var(--display); font-stretch: 112%; }
+    footer a { color: var(--on-ink); }
+
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; padding-top: 48px; padding-bottom: 40px; }
+      .system { justify-self: center; }
+      .domain { grid-template-columns: 1fr; gap: 20px; }
+      .domain-head { position: static; }
+      .toolbox { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 600px) {
+      .wrap { padding-left: 16px; padding-right: 16px; }
+      .project-list { grid-template-columns: 1fr; }
+      .system { display: none; }
+      .area-list { display: grid; gap: 8px; list-style: none; margin: 0; padding: 0; }
+      .area-list a { display: flex; justify-content: space-between; gap: 12px; padding: 12px 14px; border-radius: 10px;
+        background: var(--ink-2); border-left: 4px solid var(--c); text-decoration: none; font-weight: 600; font-size: 0.95rem; }
+      .area-list span { color: var(--c); font-weight: 500; white-space: nowrap; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .edge { animation: none; }
+    }
   </style>
 </head>
 <body>
-  <header>
-    <div class="wrap">
-      <div class="who">
-        <img src="https://github.com/shivkumarsinghsky.png?size=208" alt="Shiv Kumar" width="104" height="104">
-        <div>
-          <h1>Shiv Kumar</h1>
-          <p class="role">Software Architect · Senior Software Engineer</p>
-          <p class="meta">Noida, Uttar Pradesh, India · Agelix Consulting Pvt Ltd</p>
+  <header class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="identity">
+          <img src="https://github.com/shivkumarsinghsky.png?size=112" alt="" width="56" height="56">
+          <p>Noida, Uttar Pradesh, India<br>Agelix Consulting Pvt Ltd</p>
+        </div>
+        <h1>Shiv Kumar</h1>
+        <p class="role">Software Architect and Senior Software Engineer</p>
+        <p class="lead">For more than 12 years I have designed and built enterprise platforms, distributed
+          systems and real-time solutions: microservices and event-driven systems, multi-tenant SaaS,
+          Enterprise Asset Management and field service platforms, and AI applications built on
+          retrieval and agents.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://github.com/shivkumarsinghsky" rel="me"><svg viewBox="0 0 16 16" aria-hidden="true" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>GitHub profile</a>
+          <a class="btn btn-ghost" href="#work">See the 14 projects</a>
         </div>
       </div>
-      <p class="lead">I am a Software Architect with 12+ years of experience designing and building
-        enterprise software platforms, distributed systems and real-time solutions. My work spans
-        software architecture, microservices, event-driven systems, multi-tenant SaaS, Enterprise Asset
-        Management (EAM) and Field Service Management (FSM) platforms, and AI-powered applications using
-        retrieval-augmented generation and agents.</p>
-      <ul class="links">
-        <li><a href="https://github.com/shivkumarsinghsky" rel="me">GitHub · shivkumarsinghsky</a></li>
-        <li><a href="https://github.com/shivkumarsinghsky?tab=repositories">All repositories</a></li>
-      </ul>
+      <svg class="system" viewBox="30 30 540 410" role="img" aria-labelledby="sys-title"><title id="sys-title">Shiv Kumar's work, drawn as a system: five practice areas connected to one hub</title><line class="edge" x1="300" y1="250" x2="300.0" y2="75.0" style="--c:#7C9BFF;--d:0ms"/><line class="edge" x1="300" y1="250" x2="466.4" y2="195.9" style="--c:#3FD1BE;--d:120ms"/><line class="edge" x1="300" y1="250" x2="402.9" y2="391.6" style="--c:#C08CF0;--d:240ms"/><line class="edge" x1="300" y1="250" x2="197.1" y2="391.6" style="--c:#F2AE57;--d:360ms"/><line class="edge" x1="300" y1="250" x2="133.6" y2="195.9" style="--c:#FF8589;--d:480ms"/><g class="hub"><circle cx="300" cy="250" r="58"/><text x="300" y="246">Shiv</text><text x="300" y="268">Kumar</text></g><a class="node" href="#architecture" style="--c:#7C9BFF" aria-label="Architecture &amp; distributed systems: 4 projects"><rect x="222.0" y="41.0" width="156" height="68" rx="12"/><text class="node-label" x="300.0" y="67.0"><tspan x="300.0" dy="0">Architecture &amp;</tspan><tspan x="300.0" dy="17">distributed systems</tspan></text><text class="node-count" x="300.0" y="99.0">4 projects</text></a><a class="node" href="#eam" style="--c:#3FD1BE" aria-label="EAM &amp; real-time systems: 2 projects"><rect x="388.4" y="161.9" width="156" height="68" rx="12"/><text class="node-label" x="466.4" y="187.9"><tspan x="466.4" dy="0">EAM &amp;</tspan><tspan x="466.4" dy="17">real-time systems</tspan></text><text class="node-count" x="466.4" y="219.9">2 projects</text></a><a class="node" href="#ai" style="--c:#C08CF0" aria-label="Generative &amp; agentic AI: 2 projects"><rect x="324.9" y="357.6" width="156" height="68" rx="12"/><text class="node-label" x="402.9" y="383.6"><tspan x="402.9" dy="0">Generative &amp;</tspan><tspan x="402.9" dy="17">agentic AI</tspan></text><text class="node-count" x="402.9" y="415.6">2 projects</text></a><a class="node" href="#system-design" style="--c:#F2AE57" aria-label="Large-scale system design: 4 projects"><rect x="119.1" y="357.6" width="156" height="68" rx="12"/><text class="node-label" x="197.1" y="383.6"><tspan x="197.1" dy="0">Large-scale</tspan><tspan x="197.1" dy="17">system design</tspan></text><text class="node-count" x="197.1" y="415.6">4 projects</text></a><a class="node" href="#tooling" style="--c:#FF8589" aria-label="Developer tooling &amp; machine learning: 2 projects"><rect x="55.6" y="161.9" width="156" height="68" rx="12"/><text class="node-label" x="133.6" y="187.9"><tspan x="133.6" dy="0">Tooling &amp;</tspan><tspan x="133.6" dy="17">machine learning</tspan></text><text class="node-count" x="133.6" y="219.9">2 projects</text></a></svg>
+      <ul class="area-list" aria-label="Practice areas"><li><a href="#architecture" style="--c:#7C9BFF">Architecture &amp; distributed systems<span>4 projects</span></a></li><li><a href="#eam" style="--c:#3FD1BE">EAM &amp; real-time systems<span>2 projects</span></a></li><li><a href="#ai" style="--c:#C08CF0">Generative &amp; agentic AI<span>2 projects</span></a></li><li><a href="#system-design" style="--c:#F2AE57">Large-scale system design<span>4 projects</span></a></li><li><a href="#tooling" style="--c:#FF8589">Developer tooling &amp; machine learning<span>2 projects</span></a></li></ul>
     </div>
   </header>
+
   <main>
-    <div class="wrap">
-      <section aria-labelledby="skills">
-        <h2 id="skills">Areas of expertise</h2>
-        <ul class="skills">
-          <li>Software &amp; Solution Architecture</li>
-          <li>System Design</li>
-          <li>Distributed Systems</li>
-          <li>Microservices</li>
-          <li>Event-Driven Architecture</li>
-          <li>Multi-Tenant SaaS</li>
-          <li>EAM / FSM Platforms</li>
-          <li>Real-Time Monitoring &amp; IoT</li>
-          <li>Generative AI, RAG &amp; Agentic AI</li>
-          <li>Node.js · TypeScript · .NET · Python</li>
-          <li>PostgreSQL · SQL Server · MongoDB</li>
-          <li>Kafka · RabbitMQ · Redis · MQTT</li>
-          <li>AWS · Azure · Docker · Kubernetes</li>
+    <section class="block" id="work" aria-labelledby="work-title">
+      <div class="wrap">
+        <h2 id="work-title">Architecture portfolio</h2>
+        <p class="section-intro">Open-source reference architectures and implementations. Each repository
+          has design documents, architecture decision records, diagrams, tests, Docker and CI.</p>
+      <section class="domain" id="architecture" style="--c:#3E63DD;--c-dark:#7C9BFF" aria-labelledby="architecture-title">
+        <header class="domain-head">
+          <h3 id="architecture-title">Architecture &amp; distributed systems</h3>
+          <p>How large systems are shaped: patterns, events, tenancy and trade-offs.</p>
+        </header>
+        <ul class="project-list">
+          <li class="project">
+            <h4><a href="https://github.com/shivkumarsinghsky/system-design-architecture">system-design-architecture</a></h4>
+            <p>Twelve reference system designs with capacity models, ADRs and diagrams: video, messaging, feeds, job portal, e-commerce, multi-tenant SaaS and enterprise AI.</p>
+            <ul class="tags"><li>system design</li><li>capacity planning</li><li>ADRs</li></ul>
+          </li><li class="project">
+            <h4><a href="https://github.com/shivkumarsinghsky/microservices-patterns">microservices-patterns</a></h4>
+            <p>A catalogue of 17 microservices patterns with TypeScript implementations: saga, outbox, CQRS, event sourcing, circuit breaker, bulkhead and idempotency.</p>
+            <ul class="tags"><li>microservices</li><li>saga</li><li>CQRS</li></ul>
+          </li><li class="project">
+            <h4><a href="https://github.com/shivkumarsinghsky/event-driven-platform">event-driven-platform</a></h4>
+            <p>Three services that talk only through RabbitMQ events, with a transactional outbox, idempotent consumers, retries and dead-letter queues.</p>
+            <ul class="tags"><li>RabbitMQ</li><li>outbox</li><li>TypeScript</li></ul>
+          </li><li class="project">
+            <h4><a href="https://github.com/shivkumarsinghsky/enterprise-saas-platform">enterprise-saas-platform</a></h4>
+            <p>Multi-tenant SaaS foundations: PostgreSQL row-level security, tenant-aware auth, RBAC, entitlements, audit logs and rate limits.</p>
+            <ul class="tags"><li>multi-tenant</li><li>row-level security</li><li>RBAC</li></ul>
+          </li>
         </ul>
       </section>
-      <h2 style="margin-top:48px">Open-source architecture portfolio</h2>
-      <p>Reference architectures and implementations by Shiv Kumar, each with design documents,
-        Architecture Decision Records, diagrams, tests, Docker and CI.</p>
-      <section class="group" aria-labelledby="architecture-and-distributed-systems">
-        <h2 id="architecture-and-distributed-systems">Architecture &amp; Distributed Systems</h2>
-        <div class="grid">
-        <article class="card">
-          <h3><a href="https://github.com/shivkumarsinghsky/system-design-architecture">system-design-architecture</a></h3>
-          <p>System design knowledge base: 12 reference designs (video, messaging, social, job portal, e-commerce, multi-tenant SaaS, enterprise AI) with capacity models, ADRs and Mermaid diagrams</p>
-          <ul class="tags" aria-label="Topics"><li>system-design</li><li>software-architecture</li><li>distributed-systems</li><li>scalability</li><li>capacity-planning</li></ul>
-        </article>
-        <article class="card">
-          <h3><a href="https://github.com/shivkumarsinghsky/microservices-patterns">microservices-patterns</a></h3>
-          <p>Microservices architecture patterns catalog with TypeScript reference implementations: saga, outbox, CQRS, event sourcing, circuit breaker, retry, bulkhead, idempotency</p>
-          <ul class="tags" aria-label="Topics"><li>microservices</li><li>design-patterns</li><li>software-architecture</li><li>saga-pattern</li><li>transactional-outbox</li></ul>
-        </article>
-        <article class="card">
-          <h3><a href="https://github.com/shivkumarsinghsky/event-driven-platform">event-driven-platform</a></h3>
-          <p>Event-driven architecture reference implementation: RabbitMQ, transactional outbox, idempotent consumers, retries, dead-letter queues, event versioning, correlation IDs</p>
-          <ul class="tags" aria-label="Topics"><li>event-driven-architecture</li><li>rabbitmq</li><li>microservices</li><li>transactional-outbox</li><li>idempotency</li></ul>
-        </article>
-        <article class="card">
-          <h3><a href="https://github.com/shivkumarsinghsky/enterprise-saas-platform">enterprise-saas-platform</a></h3>
-          <p>Multi-tenant enterprise SaaS reference architecture: PostgreSQL row-level security tenant isolation, tenant-aware auth, RBAC, entitlements, audit logging, rate limiting</p>
-          <ul class="tags" aria-label="Topics"><li>multi-tenant</li><li>saas</li><li>software-architecture</li><li>row-level-security</li><li>postgresql</li></ul>
-        </article>
-        </div>
+      <section class="domain" id="eam" style="--c:#0E9F8E;--c-dark:#3FD1BE" aria-labelledby="eam-title">
+        <header class="domain-head">
+          <h3 id="eam-title">EAM &amp; real-time systems</h3>
+          <p>Asset-heavy operations: work orders, maintenance and live telemetry.</p>
+        </header>
+        <ul class="project-list">
+          <li class="project">
+            <h4><a href="https://github.com/shivkumarsinghsky/eam-platform-architecture">eam-platform-architecture</a></h4>
+            <p>Enterprise Asset Management reference architecture: work-order lifecycle, preventive and predictive maintenance, asset hierarchy, field service and maintenance KPIs.</p>
+            <ul class="tags"><li>EAM</li><li>FSM</li><li>domain-driven design</li></ul>
+          </li><li class="project">
+            <h4><a href="https://github.com/shivkumarsinghsky/realtime-monitoring-platform">realtime-monitoring-platform</a></h4>
+            <p>MQTT ingestion, Redis Streams or Kafka, alerting with hysteresis, PostgreSQL time series and a live WebSocket dashboard.</p>
+            <ul class="tags"><li>MQTT</li><li>Kafka</li><li>IoT telemetry</li></ul>
+          </li>
+        </ul>
       </section>
-      <section class="group" aria-labelledby="enterprise-asset-management-and-real-time-systems">
-        <h2 id="enterprise-asset-management-and-real-time-systems">Enterprise Asset Management &amp; Real-Time Systems</h2>
-        <div class="grid">
-        <article class="card">
-          <h3><a href="https://github.com/shivkumarsinghsky/eam-platform-architecture">eam-platform-architecture</a></h3>
-          <p>Enterprise Asset Management (EAM) reference architecture: work order lifecycle, preventive/predictive maintenance, asset hierarchy, inventory, field service, telemetry, star-schema reporting and maintenance KPIs</p>
-          <ul class="tags" aria-label="Topics"><li>enterprise-asset-management</li><li>eam</li><li>field-service-management</li><li>maintenance</li><li>cmms</li></ul>
-        </article>
-        <article class="card">
-          <h3><a href="https://github.com/shivkumarsinghsky/realtime-monitoring-platform">realtime-monitoring-platform</a></h3>
-          <p>Real-time monitoring platform: MQTT ingestion, Redis Streams/Kafka event bus, alerting with hysteresis, PostgreSQL time-series, FastAPI, WebSocket live dashboard</p>
-          <ul class="tags" aria-label="Topics"><li>real-time-monitoring</li><li>iot</li><li>telemetry</li><li>mqtt</li><li>redis-streams</li></ul>
-        </article>
-        </div>
+      <section class="domain" id="ai" style="--c:#8E4EC6;--c-dark:#C08CF0" aria-labelledby="ai-title">
+        <header class="domain-head">
+          <h3 id="ai-title">Generative &amp; agentic AI</h3>
+          <p>LLM systems that cite their sources, respect permissions and ask before acting.</p>
+        </header>
+        <ul class="project-list">
+          <li class="project">
+            <h4><a href="https://github.com/shivkumarsinghsky/rag-enterprise-assistant">rag-enterprise-assistant</a></h4>
+            <p>Retrieval-augmented generation over company documents: hybrid vector and BM25 search, pgvector, access-controlled retrieval, citations, guardrails and evaluation.</p>
+            <ul class="tags"><li>RAG</li><li>pgvector</li><li>LLM evaluation</li></ul>
+          </li><li class="project">
+            <h4><a href="https://github.com/shivkumarsinghsky/enterprise-ai-agent-platform">enterprise-ai-agent-platform</a></h4>
+            <p>LangGraph agents with authorised tool calling, RAG, memory, human-in-the-loop approvals, structured outputs and tracing.</p>
+            <ul class="tags"><li>LangGraph</li><li>AI agents</li><li>human-in-the-loop</li></ul>
+          </li>
+        </ul>
       </section>
-      <section class="group" aria-labelledby="generative-ai-and-agentic-ai">
-        <h2 id="generative-ai-and-agentic-ai">Generative AI &amp; Agentic AI</h2>
-        <div class="grid">
-        <article class="card">
-          <h3><a href="https://github.com/shivkumarsinghsky/rag-enterprise-assistant">rag-enterprise-assistant</a></h3>
-          <p>Enterprise RAG reference implementation: chunking, embeddings, hybrid retrieval (vector + BM25, RRF), pgvector, ACL/tenant filtering, citations, prompt-injection guardrails, evaluation</p>
-          <ul class="tags" aria-label="Topics"><li>rag</li><li>retrieval-augmented-generation</li><li>generative-ai</li><li>llm</li><li>pgvector</li></ul>
-        </article>
-        <article class="card">
-          <h3><a href="https://github.com/shivkumarsinghsky/enterprise-ai-agent-platform">enterprise-ai-agent-platform</a></h3>
-          <p>Enterprise AI agent platform: LangGraph orchestration, tool calling with authorization, RAG, memory, human-in-the-loop approvals, guardrails, structured outputs, tracing</p>
-          <ul class="tags" aria-label="Topics"><li>agentic-ai</li><li>ai-agents</li><li>langgraph</li><li>langchain</li><li>llm</li></ul>
-        </article>
-        </div>
+      <section class="domain" id="system-design" style="--c:#D9821E;--c-dark:#F2AE57" aria-labelledby="system-design-title">
+        <header class="domain-head">
+          <h3 id="system-design-title">Large-scale system design</h3>
+          <p>Well-known product problems worked through end to end, with runnable prototypes.</p>
+        </header>
+        <ul class="project-list">
+          <li class="project">
+            <h4><a href="https://github.com/shivkumarsinghsky/realtime-messaging-platform">realtime-messaging-platform</a></h4>
+            <p>Chat at scale: WebSocket gateways, per-conversation ordering, delivery and read receipts, presence and idempotent sends.</p>
+            <ul class="tags"><li>WebSockets</li><li>chat</li><li>presence</li></ul>
+          </li><li class="project">
+            <h4><a href="https://github.com/shivkumarsinghsky/video-streaming-platform">video-streaming-platform</a></h4>
+            <p>Video sharing: resumable uploads, a transcoding pipeline, HLS adaptive streaming, CDN delivery and sharded counters.</p>
+            <ul class="tags"><li>video streaming</li><li>HLS</li><li>CDN</li></ul>
+          </li><li class="project">
+            <h4><a href="https://github.com/shivkumarsinghsky/social-media-platform">social-media-platform</a></h4>
+            <p>News feeds: fan-out on write, on read and hybrid, with a simulation that measures the trade-off.</p>
+            <ul class="tags"><li>news feed</li><li>fan-out</li><li>caching</li></ul>
+          </li><li class="project">
+            <h4><a href="https://github.com/shivkumarsinghsky/job-portal-platform">job-portal-platform</a></h4>
+            <p>Job search with filters and facets, explainable candidate matching and an idempotent application workflow.</p>
+            <ul class="tags"><li>search</li><li>BM25</li><li>matching</li></ul>
+          </li>
+        </ul>
       </section>
-      <section class="group" aria-labelledby="large-scale-system-design">
-        <h2 id="large-scale-system-design">Large-Scale System Design</h2>
-        <div class="grid">
-        <article class="card">
-          <h3><a href="https://github.com/shivkumarsinghsky/realtime-messaging-platform">realtime-messaging-platform</a></h3>
-          <p>Real-time messaging platform reference system design: WebSocket gateways, per-conversation ordering, delivery and read receipts, presence, idempotent sends, push, E2E encryption concepts</p>
-          <ul class="tags" aria-label="Topics"><li>system-design</li><li>real-time-messaging</li><li>websocket</li><li>distributed-systems</li><li>chat-application</li></ul>
-        </article>
-        <article class="card">
-          <h3><a href="https://github.com/shivkumarsinghsky/video-streaming-platform">video-streaming-platform</a></h3>
-          <p>Video sharing platform reference system design: resumable uploads, object storage, transcoding pipeline, HLS adaptive streaming, CDN, sharded counters, search and recommendations</p>
-          <ul class="tags" aria-label="Topics"><li>system-design</li><li>video-streaming</li><li>video-processing</li><li>transcoding</li><li>cdn</li></ul>
-        </article>
-        <article class="card">
-          <h3><a href="https://github.com/shivkumarsinghsky/social-media-platform">social-media-platform</a></h3>
-          <p>Social media platform reference system design: hybrid fan-out feed generation, social graph, caching, event-driven notifications, moderation, evolution from small to internet scale</p>
-          <ul class="tags" aria-label="Topics"><li>system-design</li><li>social-network</li><li>news-feed</li><li>fan-out</li><li>distributed-systems</li></ul>
-        </article>
-        <article class="card">
-          <h3><a href="https://github.com/shivkumarsinghsky/job-portal-platform">job-portal-platform</a></h3>
-          <p>Job portal reference system design and prototype: BM25 job search with filters and facets, explainable candidate matching, idempotent application workflow, outbox notifications, PostgreSQL model</p>
-          <ul class="tags" aria-label="Topics"><li>system-design</li><li>job-portal</li><li>search-engine</li><li>bm25</li><li>recommendation-system</li></ul>
-        </article>
-        </div>
+      <section class="domain" id="tooling" style="--c:#DC4A4F;--c-dark:#FF8589" aria-labelledby="tooling-title">
+        <header class="domain-head">
+          <h3 id="tooling-title">Developer tooling &amp; machine learning</h3>
+          <p>Tools that remove boilerplate, and machine learning from first principles.</p>
+        </header>
+        <ul class="project-list">
+          <li class="project">
+            <h4><a href="https://github.com/shivkumarsinghsky/zynkoh-cli">zynkoh-cli</a></h4>
+            <p>A code generator for Clean Architecture FastAPI modules: tenant-scoped repositories, CRUD with safe filtering, and end-to-end tested output.</p>
+            <ul class="tags"><li>code generator</li><li>FastAPI</li><li>clean architecture</li></ul>
+          </li><li class="project">
+            <h4><a href="https://github.com/shivkumarsinghsky/learnix">learnix</a></h4>
+            <p>Linear regression, loss functions and gradient descent in pure Python, checked against least squares and scikit-learn.</p>
+            <ul class="tags"><li>machine learning</li><li>gradient descent</li><li>Python</li></ul>
+          </li>
+        </ul>
       </section>
-      <section class="group" aria-labelledby="developer-tooling-and-machine-learning">
-        <h2 id="developer-tooling-and-machine-learning">Developer Tooling &amp; Machine Learning</h2>
-        <div class="grid">
-        <article class="card">
-          <h3><a href="https://github.com/shivkumarsinghsky/zynkoh-cli">zynkoh-cli</a></h3>
-          <p>Code generator CLI for Clean Architecture FastAPI modules in multi-tenant SaaS: tenant-scoped repositories, CRUD with safe filtering, domain events, versioned Jinja2 templates</p>
-          <ul class="tags" aria-label="Topics"><li>code-generator</li><li>cli</li><li>fastapi</li><li>sqlalchemy</li><li>clean-architecture</li></ul>
-        </article>
-        <article class="card">
-          <h3><a href="https://github.com/shivkumarsinghsky/learnix">learnix</a></h3>
-          <p>Machine learning from scratch in pure Python: linear regression, mean squared error and gradient descent, verified against closed-form least squares and scikit-learn</p>
-          <ul class="tags" aria-label="Topics"><li>machine-learning</li><li>linear-regression</li><li>gradient-descent</li><li>from-scratch</li><li>python</li></ul>
-        </article>
-        </div>
-      </section>
-    </div>
+      </div>
+    </section>
+
+    <section class="block" id="toolbox" aria-labelledby="toolbox-title">
+      <div class="wrap">
+        <h2 id="toolbox-title">Toolbox</h2>
+        <p class="section-intro">The technologies I design with and build on.</p>
+        <div class="toolbox"><div class="tool-col"><h3>Architecture</h3><ul><li>Solution &amp; enterprise architecture</li><li>Microservices</li><li>Event-driven systems</li><li>Multi-tenant SaaS</li><li>API design</li><li>High availability</li></ul></div><div class="tool-col"><h3>Backend</h3><ul><li>Node.js &amp; TypeScript</li><li>.NET &amp; C#</li><li>Python &amp; FastAPI</li><li>Express.js</li><li>REST APIs</li></ul></div><div class="tool-col"><h3>Data &amp; messaging</h3><ul><li>PostgreSQL</li><li>SQL Server</li><li>MongoDB</li><li>Redis</li><li>Kafka</li><li>RabbitMQ</li><li>MQTT</li></ul></div><div class="tool-col"><h3>Cloud &amp; delivery</h3><ul><li>AWS</li><li>Microsoft Azure</li><li>Docker</li><li>Kubernetes</li><li>CI/CD</li><li>Observability</li></ul></div><div class="tool-col"><h3>AI</h3><ul><li>LLM applications</li><li>RAG</li><li>Agentic AI</li><li>LangChain</li><li>LangGraph</li></ul></div></div>
+      </div>
+    </section>
   </main>
+
   <footer>
-    <div class="wrap">© 2026 Shiv Kumar · <a href="https://github.com/shivkumarsinghsky">github.com/shivkumarsinghsky</a></div>
+    <div class="wrap footer-row">
+      <span><strong>Shiv Kumar</strong>, Software Architect</span>
+      <span><a href="https://github.com/shivkumarsinghsky">github.com/shivkumarsinghsky</a></span>
+      <span>© 2026</span>
+    </div>
   </footer>
 </body>
 </html>
