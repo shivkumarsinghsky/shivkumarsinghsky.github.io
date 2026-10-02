@@ -7,6 +7,7 @@ import math
 GH = "https://github.com/shivkumarsinghsky"
 SITE = "https://shivkumarsinghsky.github.io/"
 HANDLE = "shivkumarsinghsky"
+EMAIL = "shivkumarsky01@gmail.com"
 SOCIAL = [
     ("GitHub", GH,
      '<path fill="currentColor" d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.58.1.79-.25.79-.56v-1.97c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.83 1.19 3.09 0 4.42-2.69 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/>'),
@@ -14,8 +15,8 @@ SOCIAL = [
      '<rect x="1.5" y="1.5" width="21" height="21" rx="4" fill="currentColor"/><g fill="var(--icon-cut)"><rect x="5.5" y="9.5" width="3" height="9"/><circle cx="7" cy="6.6" r="1.8"/><path d="M10.6 9.5h2.9v1.3c.5-.9 1.6-1.5 2.9-1.5 2.4 0 3.1 1.5 3.1 3.8v5.4h-3v-4.8c0-1.1-.3-1.8-1.3-1.8-1.1 0-1.6.8-1.6 1.9v4.7h-3z"/></g>'),
     ("Instagram", f"https://www.instagram.com/{HANDLE}/",
      '<rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor"/>'),
-    ("Facebook", f"https://www.facebook.com/{HANDLE}",
-     '<circle cx="12" cy="12" r="11" fill="currentColor"/><path fill="var(--icon-cut)" d="M13.3 23v-8.2h2.7l.4-3.2h-3.1V9.6c0-.9.3-1.6 1.6-1.6h1.7V5.2c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.3H7.3v3.2H10V23z"/>'),
+    ("Email", f"mailto:{EMAIL}",
+     '<rect x="2" y="4.5" width="20" height="15" rx="2.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="m3 6.5 9 6.5 9-6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>'),
 ]
 
 TITLE = "Shiv Kumar — Software Architect | Distributed Systems, EAM & Enterprise AI"
@@ -108,13 +109,15 @@ def area_list() -> str:
 
 def social_links() -> str:
     return "".join(
-        f'<li><a href="{url}" rel="me noopener" aria-label="{label}: {HANDLE}" title="{label}">'
+        f'<li><a href="{url}" rel="me noopener" aria-label="{label}: {EMAIL if label == "Email" else HANDLE}" title="{EMAIL if label == "Email" else label}">'
         f'<svg viewBox="0 0 24 24" aria-hidden="true">{icon}</svg></a></li>'
         for label, url, icon in SOCIAL)
 
 
 def footer_links() -> str:
-    return "".join(f'<li><a href="{url}" rel="me noopener">{label}</a></li>' for label, url, _ in SOCIAL)
+    return "".join(
+        f'<li><a href="{url}" rel="me noopener">{EMAIL if label == "Email" else label}</a></li>'
+        for label, url, _ in SOCIAL)
 
 
 def projects() -> str:
@@ -153,7 +156,8 @@ person = {
     "image": "https://github.com/shivkumarsinghsky.png", "jobTitle": "Software Architect", "description": DESC,
     "worksFor": {"@type": "Organization", "name": "Agelix Consulting Pvt Ltd"},
     "address": {"@type": "PostalAddress", "addressLocality": "Noida", "addressRegion": "Uttar Pradesh", "addressCountry": "IN"},
-    "sameAs": [url for _, url, _ in SOCIAL],
+    "email": f"mailto:{EMAIL}",
+    "sameAs": [url for label, url, _ in SOCIAL if label != "Email"],
     "knowsAbout": ["Software Architecture", "System Design", "Distributed Systems", "Microservices",
                    "Event-Driven Architecture", "Multi-Tenant SaaS", "Enterprise Asset Management",
                    "Field Service Management", "Real-Time Monitoring", "Retrieval-Augmented Generation",
@@ -218,7 +222,7 @@ page = f'''<!doctype html>
     .identity {{ display: flex; align-items: center; gap: 14px; margin-bottom: 28px; }}
     .identity img {{ width: 56px; height: 56px; border-radius: 50%; border: 2px solid var(--ink-line); background: var(--ink-2); }}
     .identity p {{ margin: 0; color: var(--on-ink-muted); font-size: 0.95rem; line-height: 1.4; }}
-    h1 {{ font-family: var(--display); font-stretch: 125%; font-weight: 800; font-size: clamp(2.8rem, 7vw, 5rem);
+    h1 {{ font-family: var(--display); font-weight: 800; font-size: clamp(2.8rem, 7vw, 5rem);
       line-height: 0.95; letter-spacing: -0.02em; margin: 0 0 18px; }}
     .role {{ font-family: var(--display); font-stretch: 100%; font-weight: 500; font-size: clamp(1.15rem, 2.2vw, 1.45rem);
       color: var(--on-ink); margin: 0 0 20px; }}
