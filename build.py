@@ -190,7 +190,7 @@ page = f'''<!doctype html>
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="{e(TITLE)}">
   <meta name="twitter:description" content="{e(DESC)}">
-  <!-- google-site-verification: paste the meta tag from Google Search Console on the next line -->
+  <meta name="google-site-verification" content="begIPexJ4iL4L013LY68inSfXbKtdqc1ZE48pyYNEzM">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230E1A2B'/%3E%3Ctext x='16' y='22' font-family='Arial' font-weight='700' font-size='15' fill='%23fff' text-anchor='middle'%3ESK%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
