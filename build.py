@@ -68,6 +68,7 @@ DOMAINS = [
 TOOLBOX = [
     ("Architecture", ["Solution & enterprise architecture", "Microservices", "Event-driven systems", "Multi-tenant SaaS", "API design", "High availability"]),
     ("Backend", ["Node.js & TypeScript", ".NET & C#", "Python & FastAPI", "Express.js", "REST APIs"]),
+    ("Frontend", ["Angular", "React", "TypeScript", "HTML5 & CSS3", "Responsive web apps"]),
     ("Data & messaging", ["PostgreSQL", "SQL Server", "MongoDB", "Redis", "Kafka", "RabbitMQ", "MQTT"]),
     ("Cloud & delivery", ["AWS", "Microsoft Azure", "Docker", "Kubernetes", "CI/CD", "Observability"]),
     ("AI", ["LLM applications", "RAG", "Agentic AI", "LangChain", "LangGraph"]),
@@ -161,7 +162,7 @@ person = {
     "knowsAbout": ["Software Architecture", "System Design", "Distributed Systems", "Microservices",
                    "Event-Driven Architecture", "Multi-Tenant SaaS", "Enterprise Asset Management",
                    "Field Service Management", "Real-Time Monitoring", "Retrieval-Augmented Generation",
-                   "Agentic AI", "LangGraph", "Python", "TypeScript", "Node.js", ".NET", "PostgreSQL",
+                   "Agentic AI", "LangGraph", "Python", "TypeScript", "Node.js", ".NET", "Angular", "React", "PostgreSQL",
                    "Kafka", "RabbitMQ", "Redis", "Docker", "Kubernetes", "AWS", "Azure"],
 }
 website = {"@context": "https://schema.org", "@type": "WebSite", "name": "Shiv Kumar", "url": SITE}
@@ -175,7 +176,7 @@ page = f'''<!doctype html>
   <title>{e(TITLE)}</title>
   <meta name="description" content="{e(DESC)}">
   <meta name="author" content="Shiv Kumar">
-  <meta name="keywords" content="Shiv Kumar, Shiv Kumar Software Architect, shivkumarsinghsky, software architect Noida, system design, distributed systems, microservices, event-driven architecture, EAM, enterprise asset management, multi-tenant SaaS, RAG, agentic AI">
+  <meta name="keywords" content="Shiv Kumar, Shiv Kumar Software Architect, shivkumarsinghsky, software architect Noida, system design, distributed systems, microservices, event-driven architecture, EAM, enterprise asset management, multi-tenant SaaS, RAG, agentic AI, Angular, React">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#0E1A2B">
   <link rel="canonical" href="{SITE}">
@@ -280,7 +281,7 @@ page = f'''<!doctype html>
     .tags li {{ font-size: 0.8rem; font-weight: 500; padding: 2px 10px; border-radius: 999px;
       color: var(--c); background: color-mix(in srgb, var(--c) 12%, transparent); }}
 
-    .toolbox {{ display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 28px; padding: 8px 0 24px; }}
+    .toolbox {{ display: grid; grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 28px; padding: 8px 0 24px; }}
     .tool-col h3 {{ font-family: var(--display); font-stretch: 105%; font-weight: 700; font-size: 1.02rem; margin: 0 0 10px;
       padding-bottom: 10px; border-bottom: 2px solid var(--text); }}
     .tool-col ul {{ list-style: none; margin: 0; padding: 0; }}
@@ -296,11 +297,12 @@ page = f'''<!doctype html>
       .system {{ justify-self: center; }}
       .domain {{ grid-template-columns: 1fr; gap: 20px; }}
       .domain-head {{ position: static; }}
-      .toolbox {{ grid-template-columns: repeat(2, minmax(0, 1fr)); }}
+      .toolbox {{ grid-template-columns: repeat(3, minmax(0, 1fr)); }}
     }}
     @media (max-width: 600px) {{
       .wrap {{ padding-left: 16px; padding-right: 16px; }}
       .project-list {{ grid-template-columns: 1fr; }}
+      .toolbox {{ grid-template-columns: repeat(2, minmax(0, 1fr)); }}
       .system {{ display: none; }}
       .area-list {{ display: grid; gap: 8px; list-style: none; margin: 0; padding: 0; }}
       .area-list a {{ display: flex; justify-content: space-between; gap: 12px; padding: 12px 14px; border-radius: 10px;
