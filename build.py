@@ -6,6 +6,18 @@ import math
 
 GH = "https://github.com/shivkumarsinghsky"
 SITE = "https://shivkumarsinghsky.github.io/"
+HANDLE = "shivkumarsinghsky"
+SOCIAL = [
+    ("GitHub", GH,
+     '<path fill="currentColor" d="M12 .5C5.65.5.5 5.65.5 12c0 5.09 3.29 9.4 7.86 10.93.58.1.79-.25.79-.56v-1.97c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.58.23 2.75.11 3.04.74.81 1.19 1.83 1.19 3.09 0 4.42-2.69 5.39-5.26 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/>'),
+    ("LinkedIn", f"https://www.linkedin.com/in/{HANDLE}/",
+     '<rect x="1.5" y="1.5" width="21" height="21" rx="4" fill="currentColor"/><g fill="var(--icon-cut)"><rect x="5.5" y="9.5" width="3" height="9"/><circle cx="7" cy="6.6" r="1.8"/><path d="M10.6 9.5h2.9v1.3c.5-.9 1.6-1.5 2.9-1.5 2.4 0 3.1 1.5 3.1 3.8v5.4h-3v-4.8c0-1.1-.3-1.8-1.3-1.8-1.1 0-1.6.8-1.6 1.9v4.7h-3z"/></g>'),
+    ("Instagram", f"https://www.instagram.com/{HANDLE}/",
+     '<rect x="2.5" y="2.5" width="19" height="19" rx="5.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4.4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.4" cy="6.6" r="1.3" fill="currentColor"/>'),
+    ("Facebook", f"https://www.facebook.com/{HANDLE}",
+     '<circle cx="12" cy="12" r="11" fill="currentColor"/><path fill="var(--icon-cut)" d="M13.3 23v-8.2h2.7l.4-3.2h-3.1V9.6c0-.9.3-1.6 1.6-1.6h1.7V5.2c-.3 0-1.3-.1-2.5-.1-2.5 0-4.1 1.5-4.1 4.2v2.3H7.3v3.2H10V23z"/>'),
+]
+
 TITLE = "Shiv Kumar — Software Architect | Distributed Systems, EAM & Enterprise AI"
 DESC = ("Shiv Kumar is a Software Architect and Senior Software Engineer in Noida, India, with 12+ years "
         "designing enterprise platforms, distributed systems, event-driven microservices, EAM/FSM and AI applications.")
@@ -94,6 +106,17 @@ def area_list() -> str:
         for d in DOMAINS)
 
 
+def social_links() -> str:
+    return "".join(
+        f'<li><a href="{url}" rel="me noopener" aria-label="{label}: {HANDLE}" title="{label}">'
+        f'<svg viewBox="0 0 24 24" aria-hidden="true">{icon}</svg></a></li>'
+        for label, url, icon in SOCIAL)
+
+
+def footer_links() -> str:
+    return "".join(f'<li><a href="{url}" rel="me noopener">{label}</a></li>' for label, url, _ in SOCIAL)
+
+
 def projects() -> str:
     out = []
     for d in DOMAINS:
@@ -130,7 +153,7 @@ person = {
     "image": "https://github.com/shivkumarsinghsky.png", "jobTitle": "Software Architect", "description": DESC,
     "worksFor": {"@type": "Organization", "name": "Agelix Consulting Pvt Ltd"},
     "address": {"@type": "PostalAddress", "addressLocality": "Noida", "addressRegion": "Uttar Pradesh", "addressCountry": "IN"},
-    "sameAs": [GH],
+    "sameAs": [url for _, url, _ in SOCIAL],
     "knowsAbout": ["Software Architecture", "System Design", "Distributed Systems", "Microservices",
                    "Event-Driven Architecture", "Multi-Tenant SaaS", "Enterprise Asset Management",
                    "Field Service Management", "Real-Time Monitoring", "Retrieval-Augmented Generation",
@@ -208,6 +231,13 @@ page = f'''<!doctype html>
     .btn-ghost {{ border: 1px solid var(--ink-line); color: var(--on-ink); }}
     .btn-ghost:hover {{ border-color: var(--on-ink-muted); }}
     .btn svg {{ width: 18px; height: 18px; }}
+    .social {{ display: flex; align-items: center; gap: 14px; margin-top: 28px; color: var(--on-ink-muted); font-size: 0.95rem; }}
+    .social ul {{ display: flex; gap: 8px; list-style: none; margin: 0; padding: 0; }}
+    .social a {{ --icon-cut: var(--ink); display: grid; place-items: center; width: 40px; height: 40px; border-radius: 10px;
+      color: var(--on-ink); border: 1px solid var(--ink-line); }}
+    .social a:hover {{ border-color: var(--on-ink-muted); background: var(--ink-2); --icon-cut: var(--ink-2); }}
+    .social svg {{ width: 20px; height: 20px; }}
+    .footer-links {{ display: flex; flex-wrap: wrap; gap: 18px; list-style: none; margin: 0; padding: 0; }}
 
     /* System diagram */
     .system {{ width: 100%; height: auto; max-width: 580px; justify-self: end; }}
@@ -297,6 +327,10 @@ page = f'''<!doctype html>
           <a class="btn btn-primary" href="{GH}" rel="me"><svg viewBox="0 0 16 16" aria-hidden="true" fill="currentColor"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>GitHub profile</a>
           <a class="btn btn-ghost" href="#work">See the {total} projects</a>
         </div>
+        <div class="social">
+          <span>@{HANDLE} on</span>
+          <ul aria-label="Social profiles">{social_links()}</ul>
+        </div>
       </div>
       {diagram()}
       <ul class="area-list" aria-label="Practice areas">{area_list()}</ul>
@@ -325,7 +359,7 @@ page = f'''<!doctype html>
   <footer>
     <div class="wrap footer-row">
       <span><strong>Shiv Kumar</strong>, Software Architect</span>
-      <span><a href="{GH}">github.com/shivkumarsinghsky</a></span>
+      <ul class="footer-links" aria-label="Social profiles">{footer_links()}</ul>
       <span>© {datetime.date.today().year}</span>
     </div>
   </footer>
