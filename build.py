@@ -45,6 +45,7 @@ DOMAINS = [
      "line": "LLM systems that cite their sources, respect permissions and ask before acting.",
      "repos": [
         ("rag-enterprise-assistant", "Retrieval-augmented generation over company documents: hybrid vector and BM25 search, pgvector, access-controlled retrieval, citations, guardrails and evaluation.", ["RAG", "pgvector", "LLM evaluation"]),
+        ("eam-intelligence-sllm", "Domain-specific small language model for enterprise asset management: Qwen 3B fine-tuned with QLoRA into EAM-SLLM, with RAG on pgvector, read-only EAM tools, deterministic reliability metrics and the EAM-Bench benchmark.", ["small language model", "QLoRA", "EAM AI"]),
         ("enterprise-ai-agent-platform", "LangGraph agents with authorised tool calling, RAG, memory, human-in-the-loop approvals, structured outputs and tracing.", ["LangGraph", "AI agents", "human-in-the-loop"]),
      ]},
     {"id": "system-design", "name": "Large-scale system design", "short": ["Large-scale", "system design"],
